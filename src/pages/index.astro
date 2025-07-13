@@ -1,11 +1,349 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <!-- Sección Hero -->
+  <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div class="text-center">
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm font-medium mb-8">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          ¡Nuevo curso disponible!
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          Domina la
+          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Inteligencia Artificial
+          </span>
+          desde Cero
+        </h1>
+        
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Aprende a programar con IA de manera práctica y profesional. Diseñado para emprendedores y principiantes que quieren transformar sus ideas en realidad.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href="#precios"
+            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            Comenzar Ahora
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+          
+          <a
+            href="#caracteristicas"
+            class="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-200"
+          >
+            Ver Características
+          </a>
+        </div>
+        
+        <!-- Estadísticas -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">500+</div>
+            <div class="text-gray-600 dark:text-gray-400">Estudiantes Satisfechos</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">50+</div>
+            <div class="text-gray-600 dark:text-gray-400">Horas de Contenido</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">95%</div>
+            <div class="text-gray-600 dark:text-gray-400">Tasa de Éxito</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Características -->
+  <section id="caracteristicas" class="py-24 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          ¿Por qué elegir nuestro curso?
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Diseñado específicamente para emprendedores y principiantes que quieren aprender IA de manera práctica
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Característica 1 -->
+        <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Aprendizaje Práctico
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Aprende haciendo. Cada módulo incluye proyectos reales que puedes implementar inmediatamente en tu negocio.
+          </p>
+        </div>
+        
+        <!-- Característica 2 -->
+        <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Contenido Actualizado
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Acceso a las últimas tecnologías y herramientas de IA. Contenido que se actualiza constantemente.
+          </p>
+        </div>
+        
+        <!-- Característica 3 -->
+        <div class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+          <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Comunidad Activa
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Únete a una comunidad de emprendedores y desarrolladores. Networking y soporte continuo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Precios -->
+  <section id="precios" class="py-24 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Invierte en tu futuro
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300">
+          Precios accesibles para todos los presupuestos
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Plan Básico -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Plan Básico</h3>
+            <div class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              $1,999 <span class="text-lg font-normal text-gray-500 dark:text-gray-400">MXN</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Acceso completo al curso
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                50+ horas de contenido
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Certificado de finalización
+              </li>
+            </ul>
+            <a href="#contacto" class="w-full inline-flex justify-center items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-200">
+              Comenzar
+            </a>
+          </div>
+        </div>
+        
+        <!-- Plan Profesional -->
+        <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span class="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">
+              Más Popular
+            </span>
+          </div>
+          <div class="p-8 text-white">
+            <h3 class="text-2xl font-bold mb-4">Plan Profesional</h3>
+            <div class="text-4xl font-bold mb-6">
+              $3,999 <span class="text-lg font-normal text-blue-100">MXN</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Todo del plan básico
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Mentorías personalizadas
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Proyectos avanzados
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-200 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Acceso de por vida
+              </li>
+            </ul>
+            <a href="#contacto" class="w-full inline-flex justify-center items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-200">
+              Comenzar Ahora
+            </a>
+          </div>
+        </div>
+        
+        <!-- Plan Empresarial -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Plan Empresarial</h3>
+            <div class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              $9,999 <span class="text-lg font-normal text-gray-500 dark:text-gray-400">MXN</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Todo del plan profesional
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Implementación en tu empresa
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Soporte prioritario 24/7
+              </li>
+            </ul>
+            <a href="#contacto" class="w-full inline-flex justify-center items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-200">
+              Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="py-24 bg-white dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          ¿Listo para comenzar?
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-300">
+          Contáctanos y descubre cómo la IA puede transformar tu negocio
+        </p>
+      </div>
+      
+      <div class="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8">
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Nombre completo
+              </label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                Correo electrónico
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+                required
+              />
+            </div>
+          </div>
+          
+          <div>
+            <label for="plan" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Plan de interés
+            </label>
+            <select
+              id="plan"
+              name="plan"
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+            >
+              <option value="">Selecciona un plan</option>
+              <option value="basico">Plan Básico - $1,999 MXN</option>
+              <option value="profesional">Plan Profesional - $3,999 MXN</option>
+              <option value="empresarial">Plan Empresarial - $9,999 MXN</option>
+            </select>
+          </div>
+          
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Mensaje (opcional)
+            </label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white"
+              placeholder="Cuéntanos sobre tu proyecto o preguntas específicas..."
+            ></textarea>
+          </div>
+          
+          <div class="text-center">
+            <button
+              type="submit"
+              class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Enviar Mensaje
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

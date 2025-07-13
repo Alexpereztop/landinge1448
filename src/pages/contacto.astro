@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contáctanos | IA Master" description="Ponte en contacto con nosotros para resolver tus dudas sobre el curso de Inteligencia Artificial.">
+  <section class="py-24 bg-white dark:bg-gray-900 min-h-[60vh]">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">Contáctanos</h1>
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+        <form class="space-y-6">
+          <div>
+            <label for="nombre" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" class="input-field" required />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="input-field" required />
+          </div>
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="input-field" placeholder="Cuéntanos sobre tu proyecto o tus dudas..." required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn-primary">
+              Enviar Mensaje
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-gray-500 dark:text-gray-400 text-sm mt-8">
+          También puedes escribirnos a <a href="mailto:info@iamaster.com" class="underline hover:text-blue-600 dark:hover:text-blue-400">info@iamaster.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout> 
